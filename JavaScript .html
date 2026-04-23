@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.card h2 {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #007bff;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+#output {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #333;
+}
+    </style>
+    <title>FRONT END</title>
+    <script>
+          function Loop() {
+    
+    const num = parseInt(document.getElementById("userNumber").value);
+    const outputDiv = document.getElementById("output");
+    
+    let table = ""; 
+
+    
+    for (let i = 1; i <= 10; i++) {
+        
+        let result = num * i;
+        table += num + " x " + i + " = " + result + "<br>";
+    }
+
+    outputDiv.innerHTML = table;
+}
+    </script>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+        <h2>Number Loop</h2>
+
+        <input 
+            type="number" 
+            id="userNumber" 
+            placeholder="Enter a number"
+        >
+
+        <button onclick="Loop()">Run Loop</button>
+
+        <div id="output"></div>
+    </div>
+</div>
+</body>
+</html>
